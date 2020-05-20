@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0/css/all.css">
+    <title>Document</title>
+</head>
+<style>
+    *,
+    *::before,
+    *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: inherit;
+    }
+    html{
+        font-family: 'Roboto' ,sans-serif;
+        font-size: 10px;
+        box-sizing: border-box;
+    }
+    section{
+        width: 100%;
+        height: 100vh;
+        background-color: #3c4053;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container{
+        width: 100%;
+        max-width: 80rem;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    .accordian-item{
+        background-color: #283042;
+        border-radius: .4rem;
+        margin-bottom: 1rem;
+        padding: 1rem;
+        box-shadow: .5rem 2px .5rem rgba(0, 0,0, .1);
+    }
+    .accordion-link{
+        font-size: 1.6rem;
+        color: rgba(225, 225,225, .8);
+        text-decoration: none;
+        background-color: #283042;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1rem 0;
+    }
+    .accordion-link i {
+        color: #e7d5ff;
+        padding: .5rem;
+    }
+
+    .accordion-link .fa-angle-up { 
+        display: none;
+    }
+    .answer{
+        max-height: 0;
+        overflow: hidden;
+        position: relative;
+        background-color: #212838;
+        transition: max-height 650ms;
+        
+    }
+
+    .answer::before {
+        content:  "";
+        position: absolute;
+        width: .6rem;
+        height: 90%;
+        background-color: #8fc460;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+
+    .answer p {
+        color: rgba(225, 225,225, .6);
+        font-size: 1.4rem;
+    }
+
+    .accordian-item:target .answer{
+        max-height: 20rem;
+    }
+
+    .accordian-item:target .accordion-link .fa-angle-down{
+        display: none;
+    }
+    .accordian-item:target .accordion-link .fa-angle-up{
+        display: block;
+    }
+
+
+
+   
+
+
+
+
+
+</style>
+<body>
+    <section>
+    <div class="container">
+        <div class="accordian-item" id="question1">
+            <a class="accordion-link" href="#question1">
+
+                how  test acordion 1
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <div class="answer">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis cum atque nobis vitae animi commodi illo voluptates explicabo laboriosam. Ea ratione earum consectetur nemo amet, odio sunt rem dolorem!
+                </p>
+            </div>
+        </div>
+        <div class="accordian-item" id="question2">
+            <a class="accordion-link" href="#question2">
+
+                how  test acordion 2
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <div class="answer">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis cum atque nobis vitae animi commodi illo voluptates explicabo laboriosam. Ea ratione earum consectetur nemo amet, odio sunt rem dolorem!
+                </p>
+            </div>
+        </div>
+        <div class="accordian-item" id="question3">
+            <a class="accordion-link" href="#question3">
+
+                how  test acordion 3
+                <i class="fas fa-angle-down"></i>
+                <i class="fas fa-angle-up"></i>
+            </a>
+
+            <div class="answer">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse debitis cum atque nobis vitae animi commodi illo voluptates explicabo laboriosam. Ea ratione earum consectetur nemo amet, odio sunt rem dolorem!
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
